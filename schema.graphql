@@ -1,0 +1,20 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Mutation {
+  createToDo(description: String, name: String!, priority: Int): ToDo
+}
+
+type Query {
+  getToDo(id: ID!): ToDo
+  getToDos: [ToDo]
+}
+
+type ToDo {
+  description: String
+  id: ID!
+  name: String!
+  priority: Int
+}
